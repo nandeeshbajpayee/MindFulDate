@@ -55,7 +55,7 @@ const AllUsers = () => {
   };
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8 p-10">
       <div className="w-full h-max  p-[4px] text-[1.4rem]  inline-block">
         <button onClick={handleLogout} className="text-white p-2 bg-violet-700 rounded-md">LogOut</button>
       </div>
