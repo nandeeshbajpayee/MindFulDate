@@ -47,7 +47,7 @@ async function login(req, res) {
 // Register function
 async function register(req, res) {
     // console.log("registerController",req.body);
-    const { username, password, name, age, gender, interestedIn, email, phone } = req.body;
+    const { username, password, name, age, gender, interestedIn, bio , email, phone } = req.body;
     const userId = Date.now();
 
     try {
@@ -78,6 +78,7 @@ async function register(req, res) {
             gender,
             profilePhoto,
             interestedIn,
+            bio,
             email,
             phone
         });

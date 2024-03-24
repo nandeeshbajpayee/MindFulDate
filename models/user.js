@@ -9,6 +9,7 @@ const signupSchema = new mongoose.Schema({
     gender: { type: String, required: true },
     profilePhoto: { type: String },
     interestedIn: { type: String },
+    bio: { type: String },
     email: { type: String, required: true },
     phone: { type: String },
 });

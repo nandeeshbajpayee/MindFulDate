@@ -15,6 +15,7 @@ const Register = () => {
     gender: "",
     profilePhoto: null, // Updated to allow file upload
     interestedIn: "",
+    bio:"",
     email: "",
     phone: "",
   });
@@ -45,6 +46,7 @@ const Register = () => {
       formDataToSend.append("gender", formData.gender);
       formDataToSend.append("profilePhoto", formData.profilePhoto);
       formDataToSend.append("interestedIn", formData.interestedIn);
+      formDataToSend.append("bio", formData.bio);
       formDataToSend.append("email", formData.email);
       formDataToSend.append("phone", formData.phone);
 
@@ -67,7 +69,7 @@ const Register = () => {
 
   return (
     <div className="login-wrapper w-full h-screen flex bg-gradient-to-r from-pink-800 to-white">
-      <div className="container sm:w-[50%] h-full flex flex-col justify-center z-20 w-0 overflow-y-scroll">
+      <div className="container p-35 sm:w-[50%] resize-x rounded flex flex-col justify-center z-20 w-0 overflow-y-scroll">
         <h1 className="sm:text-4xl text-2xl font-bold text-center my-8 bg-gradient-to-r from-white-500 to-pink-800 text-transparent bg-clip-text">
           Register
         </h1>
@@ -197,9 +199,26 @@ const Register = () => {
             >
               <option value="">Select Interest</option>
               <option value="Male">Male</option>
-              <option value="Female">Female</option>              
+              <option value="Female">Female</option>
               <option value="Both">Both</option>
             </select>
+          </div>
+          <div className="mb-8 flex">
+            <label
+              htmlFor="bio"
+              className="block mb-1 font-semibold text-slate-200"
+            >
+              Bio/Status*
+            </label>
+            <input
+              type="text"
+              id="bio"
+              name="bio"
+              value={formData.bio}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border-pink-200 bg-transparent border-b-2 text-grey-600 outline-none"
+              required
+            />
           </div>
           <div className="mb-8 flex">
             <label
