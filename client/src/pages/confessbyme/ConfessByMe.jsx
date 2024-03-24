@@ -59,14 +59,16 @@ const ConfessionsByMe = () => {
                     <tbody className="bg-white divide-y divide-gray-200">
                         {confessions.map((confession, index) => (
                             <tr key={index}>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    {confession.to
-                                        .map(id => usernames[id])
-                                        .filter((username, idx, arr) => arr.indexOf(username) === idx)
-                                        .join(', ')
-                                    }
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">{confession.msg.join(', ')}</td>
+                                    {confession.to.map((userId, i) => (
+                                        <div key={i}>
+                                            <td className="px-6 py-4 whitespace-nowrap">
+                                                {usernames[userId]}
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap">
+                                                {confession.msg[i]}
+                                            </td>
+                                        </div>
+                                    ))}
                             </tr>
                         ))}
                     </tbody>
@@ -74,6 +76,8 @@ const ConfessionsByMe = () => {
             </div>
         </div>
     );
+
 };
+
 
 export default ConfessionsByMe;
