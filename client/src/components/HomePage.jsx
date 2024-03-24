@@ -7,12 +7,11 @@ import NavBar from './NavBar/NavBar';
 const HomePage = () => {
   return (
     <div className='homepage w-full'>
-<MiniNavBar />
+      <MiniNavBar />
       <NavBar />
       <Section1 />
       <Section2 />
       <Section3 />
-      
     </div>
   )
 }

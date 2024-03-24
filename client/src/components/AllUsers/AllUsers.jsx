@@ -28,22 +28,15 @@ const AllUsers = () => {
     navigate(`/users/${userId}`);
   };
 
-  const handleConfess =async (userId) => {
+  const handleConfess = async (userId) => {
+    try {
+        navigate(`/confess/${userId}`);
+    } catch (error) {
+        console.error('Error navigating to confession page:', error);
+    }
+};
 
-          try {
-              const confessedTo = await apiConnector('get', `http://localhost:8000/users/${userId}`);
-              // setUser(res.data);
-              console.log("confessed-To:",confessedTo.data);
-              const confessedBy = await apiConnector('get', `http://localhost:8000/users/${Cookies.get('loginedUser')}`);
-              console.log("ConfeesedBy:",confessedBy.data);
-              // const confession=await apiConnector('post',`http://localhost:8000/confess`,{confessedBy,confessedTo});
-              message.success('Confession Sent Successfully');
 
-          } catch (error) {
-              console.error('Error fetching user:', error);
-          }
-
-  };
   const handleLogout = () => {
     try {
       localStorage.removeItem("authToken");

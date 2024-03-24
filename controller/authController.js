@@ -68,8 +68,6 @@ async function register(req, res) {
             return res.status(400).send({ success: false, message: "User Already Exist" });
         }
 
-
-
         // Create new user instance
         user = new User({
             userId,

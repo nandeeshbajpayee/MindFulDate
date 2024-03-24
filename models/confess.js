@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // Define confess schema
 const confessSchema = new mongoose.Schema({
     to: [{ type: String }],
-    
+    msg: [{ type: String, required: true }],
     by: { type: String , required: true }
 });
 

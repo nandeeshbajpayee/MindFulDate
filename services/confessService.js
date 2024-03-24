@@ -3,6 +3,8 @@ const Confess = require('../models/confess');
 exports.addConfess = async (to, msg, by) => {
     let confess;
 
+    
+
     // Find the confess by the 'by' user
     const existingConfess = await Confess.findOne({ by: by });
 
@@ -19,6 +21,7 @@ exports.addConfess = async (to, msg, by) => {
             msg: [msg],
             by: by
         });
+        console.log(confess)
         await confess.save();
     }
 

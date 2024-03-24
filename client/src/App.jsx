@@ -7,6 +7,9 @@ import Register from "./components/Register/Register";
 import AllUsers from "./components/AllUsers/AllUsers";
 import ViewProfile from "./components/ViewProfile/ViewProfile";
 import Protected from "./Protected";
+import Confess from "./pages/confess/Confess";
+import ConfessByMe from "./pages/confessbyme/ConfessByMe";
+import ConfessionsForMe from "./pages/confessionforme/ConfessionForMe";
 const App = () => {
   return (
     <Router>
@@ -16,9 +19,12 @@ const App = () => {
         <Route path="/auth/register" element={<Register />} />
         <Route path='/users' element={<Protected Component={AllUsers}/>}/>
         <Route path='/users/:userId' element={<ViewProfile/>}/>
+        <Route path='/confess/:userId' element={<Confess/>}/>
+        <Route path='/confessbyme' element={<ConfessByMe/>}/>
+        <Route path='/confessforme' element={<ConfessionsForMe/>}/>
         <Route path="/*" element={<Error404 />} />
       </Routes>
-    
+
     </Router>
   );
 };

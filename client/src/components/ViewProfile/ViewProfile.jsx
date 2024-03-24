@@ -14,7 +14,6 @@ const ViewProfile = () => {
           `http://localhost:8000/users/${userId}`
         );
         setUser(res.data);
-        console.log(res.data);
       } catch (error) {
         console.error("Error fetching user:", error);
       }
