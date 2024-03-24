@@ -1,0 +1,20 @@
+import React from 'react'
+import Section1 from './Section1/Section1';
+import Section2 from './Section2/Section2';
+import Section3 from './Section3/Section3';
+import MiniNavBar from './MiniNavBar/MiniNavBar';
+import NavBar from './NavBar/NavBar';
+const HomePage = () => {
+  return (
+    <div className='homepage w-full'>
+<MiniNavBar />
+      <NavBar />
+      <Section1 />
+      <Section2 />
+      <Section3 />
+      
+    </div>
+  )
+}
+
+export default HomePage
