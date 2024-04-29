@@ -52,7 +52,10 @@ const NavBar = () => {
     >
       {/* Add this clikable at below tag  */}
       <div className="logo">
-        <a href="#home"> <img src={Logo} alt="MindFulAi" className="w-40 h-15" /></a>
+        {/* <a href="/"> <img src={Logo} alt="MindFulAi" className="w-40 h-15" /></a> */}
+        <Link to="/">
+          <img src={Logo} alt="MindFulAi" className="w-40 h-15" />
+        </Link>
       </div>
       <div className="menus flex gap-2 items-center">
         <ul className="flex gap-12 text-xl items-center p-2 cursor-pointer">

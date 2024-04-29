@@ -66,10 +66,10 @@ const Confess = () => {
                         ></textarea>
                         <button className="confess-button" type="submit">Confess</button>
                     </form>
-                    <div className="buttons-container flex justify-evenly mt-12 ">
+                    {/* <div className="buttons-container flex justify-evenly mt-12 ">
                     <button className="confess-button"><Link to='/confessforme'>See Confesses for me</Link></button>
                         <button className="confess-button"><Link to='/confessbyme'>View Confesses by me</Link></button>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="bg-gradient-to-br from-purple-200 to-pink-200 min-h-screen flex justify-center items-center">
                     <div className="max-w-lg mx-auto bg-white shadow-md rounded-md p-6">
